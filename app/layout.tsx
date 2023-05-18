@@ -1,9 +1,9 @@
 import "@styles/globals.css";
-import React, { ReactNode } from "react";
+import React, { ReactNode } from "react"
 import Nav from "@components/Nav";
 import Provider from "@components/Provider";
 
-export const metadata = {
+const metadata = {
   title: "Promptopia",
   description: "Discover & Share AI Prompts",
 };
@@ -14,6 +14,10 @@ interface RootLayoutProps {
 
 const RootLayout: React.FC<RootLayoutProps> = ({ children }) => (
   <html lang="en">
+    <head>
+      <title>{metadata.title}</title>
+      <meta name="description" content={metadata.description} />
+    </head>
     <body>
       <Provider>
         <div className="main">
